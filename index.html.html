@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Maria Eduarda & Luis Felipe - Lista de Presentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #206a5d 0%, #3baea0 100%);
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      margin: 48px auto 32px auto;
+      background: rgba(255,255,255,0.13);
+      border-radius: 18px;
+      padding: 2.5rem 1.7rem 2.5rem 1.7rem;
+      box-shadow: 0 4px 24px rgba(32,106,93,0.12);
+      border: 1.5px solid #e4e4e4;
+      position: relative;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .nomes-casal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #ffe066;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(32,106,93,0.10);
+      margin-bottom: 0.5rem;
+    }
+    .nomes-casal span {
+      display: block;
+      line-height: 1.1;
+    }
+    .icone-coracao {
+      font-size:1.3em;
+      vertical-align:middle;
+      color:#ffe066;
+      margin: 0 0.3em;
+    }
+    header .data {
+      font-size: 1.18rem;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      margin-top: 1rem;
+      font-weight: 500;
+      color: #ffe066;
+      letter-spacing: 0.2px;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.55rem;
+      margin-bottom: 0.8rem;
+      border-radius: 7px;
+      border: 1.3px solid #b5dfca;
+      font-size: 1rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: rgba(255,255,255,0.85);
+      color: #206a5d;
+      box-sizing: border-box;
+      transition: border 0.2s;
+    }
+    input:focus, select:focus {
+      border: 1.5px solid #ffe066;
+      outline: none;
+    }
+    button {
+      background: linear-gradient(90deg, #81b214 60%, #ffe066 100%);
+      color: #206a5d;
+      border: none;
+      padding: 0.8rem 1.7rem;
+      border-radius: 7px;
+      font-size: 1.1rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1.2rem;
+      box-shadow: 0 2px 10px rgba(32,106,93,0.10);
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #ffe066 60%, #81b214 100%);
+      color: #206a5d;
+    }
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+    }
+    .radio-label {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 400;
+      gap: 0.5em;
+      cursor: pointer;
+    }
+    .radio-label input[type="radio"] {
+      accent-color: #81b214;
+      width: 18px;
+      height: 18px;
+      margin-right: 0.5em;
+      margin-left: 0;
+      vertical-align: middle;
+    }
+    .radio-label .material-icons {
+      color: #ffe066;
+      font-size: 1.2em;
+      vertical-align: middle;
+      margin-right: 0.2em;
+    }
+    .qr-section {
+      text-align: center;
+      margin-top: 2.3rem;
+      margin-bottom: 1.2rem;
+      background: rgba(255,255,255,0.11);
+      border-radius: 10px;
+      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      box-shadow: 0 1px 8px rgba(32,106,93,0.06);
+    }
+    .qr-section h3 {
+      color: #ffe066;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .qr-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      background: #fff;
+      padding: 8px;
+      margin-bottom: 0.4rem;
+      box-shadow: 0 2px 10px rgba(32,106,93,0.10);
+      border: 1.5px solid #ffe066;
+    }
+    .qr-section div {
+      color: #fff;
+      font-size: 1.02rem;
+      margin-top: 0.3rem;
+    }
+    .agradecimento {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.13rem;
+      color: #ffe066;
+      background: rgba(32,106,93,0.13);
+      border-radius: 10px;
+      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      box-shadow: 0 1px 8px rgba(32,106,93,0.06);
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem 0.4rem;
+      }
+      .qr-img {
+        width: 100px;
+        height: 100px;
+      }
+      .nomes-casal {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nomes-casal">
+        <span>
+          <span class="material-icons icone-coracao">favorite</span>
+          Maria Eduarda
+        </span>
+        <span style="margin: 0.2em 0 0.2em 0;">&</span>
+        <span>
+          Luis Felipe
+          <span class="material-icons icone-coracao">favorite</span>
+        </span>
+      </div>
+      <div class="data">
+        <span class="material-icons" style="font-size:1em;vertical-align:middle;color:#ffe066;">event</span>
+        31/01/2026
+      </div>
+    </header>
+
+    <form id="giftForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="presente">Escolha seu presente:</label>
+      <select id="presente" name="presente" required>
+        <option value="" disabled selected>Selecione um presente</option>
+        <option value="Jogo de cama - R$ 180,00">Jogo de cama - R$ 180,00</option>
+        <option value="Aparelho de jantar - R$ 220,00">Aparelho de jantar - R$ 220,00</option>
+        <option value="Liquidificador - R$ 150,00">Liquidificador - R$ 150,00</option>
+        <option value="Ferro de passar - R$ 120,00">Ferro de passar - R$ 120,00</option>
+        <option value="Conjunto de panelas - R$ 350,00">Conjunto de panelas - R$ 350,00</option>
+        <option value="Sanduicheira - R$ 90,00">Sanduicheira - R$ 90,00</option>
+        <option value="Aspirador de pó - R$ 210,00">Aspirador de pó - R$ 210,00</option>
+        <option value="Batedeira - R$ 160,00">Batedeira - R$ 160,00</option>
+        <option value="Panela elétrica de arroz - R$ 180,00">Panela elétrica de arroz - R$ 180,00</option>
+        <option value="Jogo de toalhas - R$ 110,00">Jogo de toalhas - R$ 110,00</option>
+        <option value="Cafeteira - R$ 130,00">Cafeteira - R$ 130,00</option>
+        <option value="Conjunto de copos - R$ 70,00">Conjunto de copos - R$ 70,00</option>
+        <option value="Conjunto de pratos - R$ 100,00">Conjunto de pratos - R$ 100,00</option>
+        <option value="Faqueiro - R$ 140,00">Faqueiro - R$ 140,00</option>
+        <option value="Edredom - R$ 200,00">Edredom - R$ 200,00</option>
+        <option value="Kit churrasco - R$ 120,00">Kit churrasco - R$ 120,00</option>
+        <option value="Jogo de panelas antiaderente - R$ 320,00">Jogo de panelas antiaderente - R$ 320,00</option>
+        <option value="Jogo de taças - R$ 80,00">Jogo de taças - R$ 80,00</option>
+        <option value="Tapete engraçado para porta - R$ 60,00">Tapete engraçado para porta - R$ 60,00</option>
+        <option value="Camisa do Galo para o noivo - R$ 200,00">Camisa do Galo para o noivo - R$ 200,00</option>
+        <option value="Almofada divertida - R$ 45,00">Almofada divertida - R$ 45,00</option>
+        <option value="Pipoqueira elétrica - R$ 110,00">Pipoqueira elétrica - R$ 110,00</option>
+        <option value="Cesta de café da manhã - R$ 90,00">Cesta de café da manhã - R$ 90,00</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label>Como você prefere entregar?</label>
+      <div class="radio-group">
+        <label class="radio-label" for="presencial">
+          <input type="radio" id="presencial" name="opcao" value="Presencial" required>
+          <span class="material-icons">redeem</span>
+          Entregar pessoalmente no casamento
+        </label>
+        <label class="radio-label" for="pix">
+          <input type="radio" id="pix" name="opcao" value="Pix" required>
+          <span class="material-icons">payments</span>
+          Enviar o valor por Pix
+        </label>
+      </div>
+
+      <button type="submit">
+        <span class="material-icons" style="vertical-align:middle;font-size:1.1em;">check_circle</span>
+        Confirmar Presente
+      </button>
+    </form>
+
+    <div id="thankYouMessage" style="display:none;" class="agradecimento">
+      <span class="material-icons" style="font-size:2em;vertical-align:middle;color:#ffe066;">celebration</span>
+      <h2>Obrigado pela confirmação!</h2>
+      <p>Recebemos sua escolha. Agradecemos pelo carinho!</p>
+    </div>
+
+    <div class="qr-section">
+      <h3>
+        <span class="material-icons" style="font-size:1.1em;vertical-align:middle;color:#ffe066;">qr_code_2</span>
+        Ou, se preferir, faça um Pix:
+      </h3>
+      <img src="qrcodebanco.jpeg" alt="QR Code Pix" class="qr-img">
+      <div>
+        <span class="material-icons" style="font-size:1em;vertical-align:middle;color:#ffe066;">key</span>
+        Chave Pix: 38999817834
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('giftForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const data = new FormData(form);
+
+      const response = await fetch('https://formspree.io/f/xkgbkejv', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+      } else {
+        alert('Ocorreu um erro ao enviar. Tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>
